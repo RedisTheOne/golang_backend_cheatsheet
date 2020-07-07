@@ -58,12 +58,14 @@ func fetchSingle() {
 }
 
 func main() {
+	sayHello()
+
 	if dbErr != nil {
 		panic(dbErr.Error())
 	}
 
 	//fetchSingle()
-	//fetchData()
+	fetchData()
 	//query()
 
 	defer db.Close()
